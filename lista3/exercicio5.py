@@ -24,4 +24,3 @@ print(f"Nota máxima -> {nome_max}:{nota_maxima}")
 
 print(f"Nota minima -> {nome_min}:{nota_minima}")
 
-print(type(nota_maxima))

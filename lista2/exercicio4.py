@@ -1,32 +1,32 @@
  # Exercício 4
 
-janeiro=int(input("Digite a temperatura média de Janeiro: "))
+janeiro = int(input("Digite a temperatura média de Janeiro: "))
 
-fevreiro=int(input("Digite a temperatura média de Fevereiro: "))
+fevreiro = int(input("Digite a temperatura média de Fevereiro: "))
 
-março=int(input("Digite a temperatura média de Março: "))
+março = int(input("Digite a temperatura média de Março: "))
 
-abril=int(input("Digite a temperatura média de Abril: "))
+abril = int(input("Digite a temperatura média de Abril: "))
 
-maio=int(input("Digite a temperatura média de Maio: "))
+maio = int(input("Digite a temperatura média de Maio: "))
 
-junho=int(input("Digite a temperatura média de Junho: "))
+junho = int(input("Digite a temperatura média de Junho: "))
 
-julho=int(input("Digite a temperatura média de Julho: "))
+julho = int(input("Digite a temperatura média de Julho: "))
 
-agosto=int(input("Digite a temperatura média de Agosto: "))
+agosto = int(input("Digite a temperatura média de Agosto: "))
 
-setembro=int(input("Digite a temperatura média de Setembro: "))
+setembro = int(input("Digite a temperatura média de Setembro: "))
 
-outubro=int(input("Digite a temperatura média de Outubro: "))
+outubro = int(input("Digite a temperatura média de Outubro: "))
 
-novembro=int(input("Digite a temperatura média de Novembro: "))
+novembro = int(input("Digite a temperatura média de Novembro: "))
 
-dezembro=int(input("Digite a temperatura média de Dezembro: "))
+dezembro = int(input("Digite a temperatura média de Dezembro: "))
 
-temperaturas=[janeiro,fevreiro,março,abril, maio,junho,julho,agosto,setembro,outubro,novembro,dezembro] 
+temperaturas = [janeiro,fevreiro,março,abril, maio,junho,julho,agosto,setembro,outubro,novembro,dezembro] 
 
-temperatura_media_anual=sum(temperaturas)/len(temperaturas)
+temperatura_media_anual = sum(temperaturas)/len(temperaturas)
 
 print(f"\n\n A temperatura média anual é {temperatura_media_anual:2.1f} e os meses que superaram essa marca são: ")
 

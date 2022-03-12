@@ -2,9 +2,9 @@
 
 # Exercício 1
 
-variavel=1+5+8
+variavel = 1 +5 +8
 
-dicionario={"Vinicius": "SP"}
+dicionario = {"Vinicius": "SP"}
 
 lista = ["string", 8, variavel, ["Python", dicionario["Vinicius"], 12], not True]
 

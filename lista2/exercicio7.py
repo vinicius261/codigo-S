@@ -4,25 +4,25 @@
 from ast import Str
 
 
-lista=["1","7","99", "15"]
+lista = ["1","7","99", "15"]
 
-lista[0]=int(lista[0])
+lista[0] = int(lista[0])
 
-lista[1]=int(lista[1])
+lista[1] = int(lista[1])
 
-lista[2]=int(lista[2])
+lista[2] = int(lista[2])
 
-lista[3]=int(lista[3])
+lista[3] = int(lista[3])
 
 print(f"A conversão dos objetos da lista para inteiros fica: {lista}")
 
-lista[0]=str(lista[0])
+lista[0] = str(lista[0])
 
-lista[1]=str(lista[1])
+lista[1] = str(lista[1])
 
-lista[2]=str(lista[2])
+lista[2] = str(lista[2])
 
-lista[3]=str(lista[3])
+lista[3] = str(lista[3])
 
 print(f"A conversão dos objetos da lista para string fica: {lista}")
 

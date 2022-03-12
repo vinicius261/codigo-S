@@ -2,11 +2,11 @@
 
 # Exercício 5
 
-aluno_nota={"Abel":6,"Balbino":7,"Custódio":2,"Douglas":5}
+aluno_nota = {"Abel":6,"Balbino":7,"Custódio":2,"Douglas":5}
 
-nota_maxima=max(list(aluno_nota.values()))
+nota_maxima = max(list(aluno_nota.values()))
 
-nota_minima=max(list(aluno_nota.values()))
+nota_minima = max(list(aluno_nota.values()))
 
 print(type(nota_maxima))
 

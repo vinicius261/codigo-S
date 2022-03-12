@@ -2,7 +2,7 @@
 
 # Exercício 6
 
-frase=["Esse"," ","Bootcamp"," ","de"," ","Python"," ","está"," ","demais"," ","!"," ","!"]
+frase = ["Esse"," ","Bootcamp"," ","de"," ","Python"," ","está"," ","demais"," ","!"," ","!"]
 
 frase.remove(" ")
 
