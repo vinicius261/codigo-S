@@ -1,4 +1,4 @@
-#Lista de exercícios: Desafio
+#Lista de exercícios: Desafio -Jogo em que o úsuario tenta advinhar a soma de dois dados lançados.
 
 #Exercício 2
 

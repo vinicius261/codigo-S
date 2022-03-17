@@ -1,4 +1,4 @@
-#Lista de exercícios: Desafio
+#Lista de exercícios: Desafio - - Jogo em que o usuário tenta adivinhar números sorteados de 1 a 100 no menor número de tentavivas possível.
 
 #Exercício 1
 
@@ -64,7 +64,13 @@ while condicao == "Sim".upper() :
 
         numero_de_tentativas = numero_de_tentativas + 1
 
-        print (f"\nParabéns! Você acertou o número sorteado e o número de tentativas foi : {numero_de_tentativas}\n")  
+        print (f"\nParabéns! Você acertou o número sorteado e o número de tentativas foi : {numero_de_tentativas}\n") 
+
+        #zerar a lista de números escolhidos em caso continuidade do jogo.
+        numeros_ja_escolhidos = [] 
+
+        #zerar número de tentativas em caso de continuidade do jogo.
+        numero_de_tentativas = 0
 
         condicao = input("Deseja jogar novamente? Responda Sim ou Nao: ").upper()  
  
