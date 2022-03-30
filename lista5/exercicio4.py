@@ -1,5 +1,19 @@
 #Lista de exercícios: Laço de repetição
 
-#Exercício 3 DESAFIO
+#Exercício 4 DESAFIO
 
-pi = 3 + 4/3*2*4 - 4/4*5*6 + 4/6*7*8 - ...
+print("\n\nAs 15 primeiras aproximações de Pi são: ")
+
+pi = 3
+
+print(f"\n{pi}")
+
+for x in range(2, 29, 4):
+
+    pi = pi + 4/(x*(x+1)*(x+2))
+
+    print(f"\n{pi}")
+
+    pi = pi - 4/((x+2)*(x+3)*(x+4))
+
+    print(f"\n{pi}")

@@ -1,9 +1,10 @@
-#Lista de exercícios: Desafio - - Jogo em que o usuário tenta adivinhar números sorteados de 1 a 100 no menor número de tentavivas possível.
+#Lista de exercícios: Desafio - - Jogo em que o usuário tenta adivinhar números sorteados de 1 a 100 
+#no menor número de tentavivas possível.
 
 #Exercício 1
 
 
-from random import random, uniform
+from random import randint
 
 numero_de_tentativas = 0
 
@@ -12,9 +13,7 @@ condicao = "Sim".upper()
 while condicao == "Sim".upper() :
 
 
-    numero_sorteado = uniform(1, 100)
-
-    numero_sorteado_int = round(numero_sorteado)
+    numero_sorteado = randint(1,100)
 
     numeros_validos = list(range(1,101))
 
@@ -26,7 +25,7 @@ while condicao == "Sim".upper() :
         numero_escolhido = int(input("O número está entre 1 e 100, digite novamente : "))
 
     
-    while numero_sorteado_int != numero_escolhido :
+    while numero_sorteado != numero_escolhido :
 
         #Incrementado contra a reperição de números
         if  numero_escolhido in numeros_ja_escolhidos :
@@ -37,7 +36,7 @@ while condicao == "Sim".upper() :
                  numero_escolhido = int(input("O número está entre 1 e 100, digite novamente : "))
 
 
-        elif numero_escolhido < numero_sorteado_int :
+        elif numero_escolhido < numero_sorteado :
             
             numeros_ja_escolhidos.append(numero_escolhido)
 
@@ -49,7 +48,7 @@ while condicao == "Sim".upper() :
                  numero_escolhido = int(input("O número está entre 1 e 100, digite novamente : "))
 
             
-        elif numero_escolhido > numero_sorteado_int :
+        elif numero_escolhido > numero_sorteado :
 
             numeros_ja_escolhidos.append(numero_escolhido)
 
@@ -60,7 +59,7 @@ while condicao == "Sim".upper() :
             while numero_escolhido not in numeros_validos: 
                 numero_escolhido = int(input("O número está entre 1 e 100, digite novamente : "))
 
-    if   numero_sorteado_int == numero_escolhido:
+    if   numero_sorteado == numero_escolhido:
 
         numero_de_tentativas = numero_de_tentativas + 1
 
