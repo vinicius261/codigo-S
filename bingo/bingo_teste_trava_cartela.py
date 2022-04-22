@@ -29,11 +29,11 @@ Passo número desafio:
     * O número máximo de sorteios para que a cartela seja vencedora
 """
 
-import cartela
-
 import sorteios
 
 import cartela_fixa
+
+from random import seed
 
 num_de_rodadas = []
 
@@ -41,7 +41,7 @@ num_sorteios = int(input("Digite o quantidade de sorteios para o teste:"))
 
 for _ in range(num_sorteios):
 
-    cartela2 = cartela_fixa.gerador_de_cartela_fixa()
+    cartela2 = cartela_fixa.gerador_de_cartela()
 
     num_sorteados = [0]
 
@@ -64,9 +64,9 @@ for _ in range(num_sorteios):
         num_sorteados.append(num_da_vez)
 
 
-        if cartela.verifica_acertos(cartela2, letra_da_vez, num_da_vez):
+        if cartela_fixa.verifica_acertos(cartela2, letra_da_vez, num_da_vez):
 
-            cartela2 = cartela.marca_numero(cartela2, letra_da_vez, num_da_vez, "  ")
+            cartela2 = cartela_fixa.marca_numero(cartela2, letra_da_vez, num_da_vez, "  ")
 
         for letra in "BINGO":
 
@@ -97,7 +97,7 @@ for _ in range(num_sorteios):
                 # print(f"A cartela foi vecendora fechando linha(s) e com {contador} rodadas.\n")
                 cartela_ganhou = True
 
-    # cartela.imprime(cartela2)
+    cartela_fixa.imprime(cartela2)
 
     num_de_rodadas.append(contador)
 

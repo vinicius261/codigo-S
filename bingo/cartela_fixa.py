@@ -4,13 +4,31 @@ from random import randint, seed
 
 from cartela import min_max
 
+seed(15)
+
 LETRAS = ("B", "I", "N","G", "O")
 
-def gerador_de_cartela_fixa() -> defaultdict[str, list[int]] :
 
-    """Gera uma mesma cartela com 5 números para cada letra."""
+def min_max (letra: str) -> tuple[int] :
+    """Gera os limites mínimo e máximo dos números para a letra.
     
-    seed(14)
+    Agrs:
+        letra(str)
+        
+    Returns:
+        tuple[int]: minimo, maximo
+    """
+
+    intervalo = {"B": (1,15), "I" : (16,30), "N": (31,45), "G":(46,60), "O": (61,75)}
+
+    minimo, maximo = intervalo[letra][0], intervalo[letra][1]
+
+    return minimo, maximo
+
+
+def gerador_de_cartela() -> defaultdict[str, list[int]] :
+
+    """Gera uma cartela com 5 números para cada letra."""
 
     cartela = defaultdict(list)
 
@@ -28,4 +46,52 @@ def gerador_de_cartela_fixa() -> defaultdict[str, list[int]] :
 
             cartela[letra].sort()
 
-    return cartela    
+    return cartela
+
+ 
+
+def imprime (cartela: dict[str, list[int]]) -> None:
+
+    """Imprime uma cartela formatada.
+    
+    Args:
+        cartela (dict[str, list[int]]): cartela de entrada
+    """
+    
+    print("B  I  N   G  O")
+
+    for linha in range(5):
+
+        elementos = " ".join([str(elemento[linha]).zfill(2) for elemento in cartela.values()])
+        
+        print(elementos)
+
+
+def marca_numero(cartela: defaultdict, letra: str, numero: int, caracter: str):
+    """Marca os números sortedos presentes na cartela fornecida."""
+   
+    indice = cartela[letra].index(numero)
+
+    cartela[letra][indice] = caracter
+
+    return cartela              
+
+def marca_numero_declara (cartela: defaultdict, letra: str, numero: int, caracter: str):
+    """Marca e apresenta os números sortedos presentes na cartela fornecida."""
+
+    indice = cartela[letra].index(numero)
+
+    cartela[letra][indice] = caracter
+    
+    print(f"\nAcertou o número {numero}!\n")
+
+    return cartela                  
+
+def verifica_acertos (cartela: defaultdict, letra: str, numero: int):
+    """Verifica se o número fornecido existe na cartela fornecida."""
+    if numero in cartela[letra]:  
+        return True
+    
+    return False
+         
+        
