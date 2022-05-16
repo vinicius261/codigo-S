@@ -7,15 +7,26 @@ Quadrado Mágico
 
 
 from collections import defaultdict
+import itertools
+
 
 from random import shuffle
 
 
+
 def create_square(numero: int) -> defaultdict:
     """Cria um candidato a quadrado mágico"""
+    
     numbers = list(range(1, (numero**2)+1))
 
-    shuffle(numbers)
+    
+    for number in range(0, len(numbers)+1):
+        for combination in itertools.combinations(numbers, number):
+            if len(combination) == len(numbers):
+                numbers = list(combination)
+
+
+    # shuffle(numbers)
 
     lines_sum = sum(numbers)/numero
 
