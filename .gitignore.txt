@@ -1,2 +1,2 @@
-/codewars2
-/.gitignore
+codewars2/
+.gitignore/
