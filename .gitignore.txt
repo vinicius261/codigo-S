@@ -1,2 +1,0 @@
-codewars2/
-.gitignore/
